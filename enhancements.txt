@@ -5,18 +5,9 @@
 # -------
 #   - log processing - what level?  what detail?
 #   - send daily email with status and latest wordcloud / results
-# Archive
-# -------
-#   - create archive folder with a datestamp
-#   - move results files and log to archive folder
 # Automation
 # ----------
 #   - schedule execution in os - cron
-# Version Control
-# ---------------
-#   - use github for version control
-#   - readme for enhancements
-#   - readme for structure being used
 # Design Considerations
 # ---------------------
 #   - use a separate stopwords.csv file - where to store this?
@@ -35,4 +26,16 @@
 # ------------------
 #   in wordcloud, highlight words that are new today cf yesterday
 #   what do I want to show in Tableau/Matplotlib?  what data do I need?
+###############################################################################
+# Finito
+# ------
+# Version Control
+# ---------------
+#   - use github for version control
+#   - readme for enhancements
+#   - readme for structure being used
+# Archive
+# -------
+#   - create archive folder with a datestamp
+#   - move results files and log to archive folder
 ###############################################################################

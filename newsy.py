@@ -2,7 +2,7 @@
 # newsy
 ###############################################################################
 # import modules
-# how many import and declaration methods are being used here?
+# how many import and declaration methods are being used here
 # is pyplot a function within the module matplotlib?
 import matplotlib.pyplot as plt
 # import a function from a module
@@ -13,8 +13,14 @@ from bs4 import BeautifulSoup
 # import a whole module
 # import requests
 import logging
+import datetime
+import os
 ###############################################################################
-logging.basicConfig(filename='newsy.log', level=logging.INFO,
+# create archive folder
+arc_dir = f'output/{datetime.date.today()}'
+os.mkdir(arc_dir)
+###############################################################################
+logging.basicConfig(filename=f'{arc_dir}/newsy.log', level=logging.INFO,
                     format='%(asctime)s:%(levelname)s:%(message)s')
 ###############################################################################
 stw = set(STW)
@@ -83,7 +89,7 @@ logging.info('Stopwords Processed')
 ###############################################################################
 url = 'https://www.theguardian.com/uk'
 response_guardian = get(url)
-file_guardian = open("Guardian.html", "a")
+file_guardian = open(f'{arc_dir}/Guardian.html', "a")
 file_guardian.write(response_guardian.text)
 file_guardian.close()
 logging.info('fetched Guardian')
@@ -92,7 +98,7 @@ logging.info('fetched Guardian')
 ###############################################################################
 url = 'https://www.telegraph.co.uk/'
 response_telegraph = get(url)
-file_telegraph = open("Telegraph.html", "a")
+file_telegraph = open(f'{arc_dir}/Telegraph.html', "a")
 file_telegraph.write(response_telegraph.text)
 file_telegraph.close()
 logging.info('fetched Telegraph')
@@ -101,7 +107,7 @@ logging.info('fetched Telegraph')
 ###############################################################################
 url = 'https://www.dailymail.co.uk/home/index.html'
 response_mail = get(url)
-file_mail = open("Mail.html", "a")
+file_mail = open(f"{arc_dir}/Mail.html", "a")
 file_mail.write(response_mail.text)
 file_mail.close()
 logging.info('fetched Mail')
@@ -110,7 +116,7 @@ logging.info('fetched Mail')
 ###############################################################################
 url = 'https://www.bbc.co.uk/news'
 response_bbc = get(url)
-file_bbc = open("BBC.html", "a")
+file_bbc = open(f"{arc_dir}/BBC.html", "a")
 file_bbc.write(response_bbc.text)
 file_bbc.close()
 logging.info('fetched BBC')
@@ -119,7 +125,7 @@ logging.info('fetched BBC')
 ###############################################################################
 url = 'https://www.thesun.co.uk/news'
 response_thesun = get(url)
-file_thesun = open("thesun.html", "a")
+file_thesun = open(f"{arc_dir}/thesun.html", "a")
 file_thesun.write(response_thesun.text)
 file_thesun.close()
 logging.info('fetched Sun')
@@ -128,7 +134,7 @@ logging.info('fetched Sun')
 ###############################################################################
 url = 'https://www.thetimes.co.uk/'
 response_times = get(url)
-file_times = open("thetimes.html", "a")
+file_times = open(f"{arc_dir}/thetimes.html", "a")
 file_times.write(response_times.text)
 file_times.close()
 logging.info('fetched Times')
@@ -137,7 +143,7 @@ logging.info('fetched Times')
 ###############################################################################
 url = 'https://www.independent.co.uk/'
 response_independent = get(url)
-file_independent = open("independent.html", "a")
+file_independent = open(f"{arc_dir}/independent.html", "a")
 file_independent.write(response_independent.text)
 file_independent.close()
 logging.info('fetched Independent')
@@ -185,7 +191,7 @@ logging.info('wordcloud prepared')
 # Display the wordcloud:
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
-plt.savefig('newsy.jpg', width=600, height=300, dpi=None, facecolor='w', edgecolor='w',
+plt.savefig(f'{arc_dir}/newsy.jpg', width=600, height=300, dpi=None, facecolor='w', edgecolor='w',
             orientation='landscape', papertype=None, format=None,
             transparent=False, bbox_inches=None, pad_inches=0.1,
             metadata=None)
