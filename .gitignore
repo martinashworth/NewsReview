@@ -1,7 +1,4 @@
-.DS_Store
 *.pyc
-*.sublime-workspace
-/dev
-/modules
-/old
-/output
+/archive/2020*
+/archive/.DS_Store
+.gitignore
