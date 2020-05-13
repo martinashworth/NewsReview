@@ -29,12 +29,12 @@ Structure
 | README.md <br />
 | <br />
 |-scripts <br />
-|&nbsp;&nbsp;&nbsp;&nbsp;|- README.md <br />
-|&nbsp;&nbsp;&nbsp;&nbsp;|- newsy.py <br />
-|&nbsp;&nbsp;&nbsp;&nbsp;|- newsy_proc.py <br />
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- README.md <br />
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- newsy.py <br />
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- newsy_proc.py <br />
 | <br />
 |-archive <br />
-|&nbsp;&nbsp;&nbsp;&nbsp;|- README.md <br />
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- README.md <br />
 
 Documentation
 -------------
