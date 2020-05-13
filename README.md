@@ -1,5 +1,5 @@
 Newsy
-===================
+=====
 
 This is a tool to scrape news headlines from the following publications: <br />
 <br />
@@ -22,8 +22,8 @@ It's very much a work in progress
 [The Independent]: https://www.independent.co.uk/
 [The Sun]: https://www.thesun.co.uk/news
 
-Structure
----------
+File Structure
+--------------
 
 |-README.md <br />
 | <br />
@@ -38,12 +38,12 @@ Structure
 Documentation
 -------------
 
-At this stage there isn't any Documentation.
+At this stage there isn't any Documentation.  This is for my purposes, not yours.
 
 Support
 -------
 
-Nor is there any Support.
+Nor is there any Support.  You're on your own, but you'll figure it out.
 
 Code of Conduct
 ---------------
