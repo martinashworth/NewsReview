@@ -14,7 +14,7 @@ This is a tool to scrape news headlines from the following publications:
 It's very much a work in progress
 
 [Newsy]: https://github.com/trevordistance/newsy
-[BBC]: https://www.bbc.co.uk/news
+[The BBC]: https://www.bbc.co.uk/news
 [The Times]: https://www.thetimes.co.uk/
 [The Guardian]: https://www.theguardian.com/uk/
 [The Mail][]: https://www.dailymail.co.uk/home/index.html
