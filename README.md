@@ -2,6 +2,7 @@
 ===================
 
 This is a tool to scrape news headlines from the following publications: <br />
+<br />
 [The BBC][] <br />
 [The Guardian][] <br />
 [The Independent][] <br />
@@ -28,12 +29,12 @@ Structure
 | README.md <br />
 | <br />
 |-scripts <br />
-|   |- README.md <br />
-|   |- newsy.py <br />
-|   |- newsy_proc.py <br />
+|&nbsp;&nbsp;&nbsp;&nbsp;|- README.md <br />
+|&nbsp;&nbsp;&nbsp;&nbsp;|- newsy.py <br />
+|&nbsp;&nbsp;&nbsp;&nbsp;|- newsy_proc.py <br />
 | <br />
 |-archive <br />
-    |- README.md <br />
+|&nbsp;&nbsp;&nbsp;&nbsp;|- README.md <br />
 
 Documentation
 -------------
