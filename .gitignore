@@ -8,3 +8,4 @@ newsy.sublime-workspace
 /old
 /archive/2020*
 /archive/.DS_Store
+/scripts/*.json
