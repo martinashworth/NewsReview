@@ -3,11 +3,11 @@
 
 This is a tool to scrape news headlines from the following publications: <br />
 [The BBC][] <br />
-[The Times][] <br />
 [The Guardian][] <br />
+[The Independent][] <br />
 [The Mail][] <br />
 [The Telegraph][] <br />
-[The Independent][] <br />
+[The Times][] <br />
 [The Sun][] <br />
 
 
