@@ -1,7 +1,7 @@
 [Newsy][]
 ===================
 
-This is a tool to scrape news headlines from the following publications:
+This is a tool to scrape news headlines from the following publications: </br />
 [The BBC][] <br />
 [The Times][] <br />
 [The Guardian][] <br />
