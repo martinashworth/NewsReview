@@ -17,10 +17,10 @@ It's very much a work in progress
 [The BBC]: https://www.bbc.co.uk/news
 [The Times]: https://www.thetimes.co.uk/
 [The Guardian]: https://www.theguardian.com/uk/
-[The Mail][]: https://www.dailymail.co.uk/home/index.html
-[The Telegraph][]: https://www.telegraph.co.uk/
-[The Independent][]: https://www.independent.co.uk/
-[The Sun][]: https://www.thesun.co.uk/news
+[The Mail]: https://www.dailymail.co.uk/home/index.html
+[The Telegraph]: https://www.telegraph.co.uk/
+[The Independent]: https://www.independent.co.uk/
+[The Sun]: https://www.thesun.co.uk/news
 
 Structure
 ---------
