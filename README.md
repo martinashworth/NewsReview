@@ -1,4 +1,4 @@
-[Newsy][]
+Newsy
 ===================
 
 This is a tool to scrape news headlines from the following publications: <br />
@@ -14,7 +14,6 @@ This is a tool to scrape news headlines from the following publications: <br />
 
 It's very much a work in progress
 
-[Newsy]: https://github.com/trevordistance/newsy
 [The BBC]: https://www.bbc.co.uk/news
 [The Times]: https://www.thetimes.co.uk/
 [The Guardian]: https://www.theguardian.com/uk/
