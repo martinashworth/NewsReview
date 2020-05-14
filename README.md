@@ -12,7 +12,7 @@ This is a tool to scrape news headlines from the following publications: <br />
 [The Sun][] <br />
 
 
-It's very much a work in progress
+It's very much a work in progress.
 
 [The BBC]: https://www.bbc.co.uk/news
 [The Times]: https://www.thetimes.co.uk/
