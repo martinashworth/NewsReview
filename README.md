@@ -22,6 +22,9 @@ It's very much a work in progress.
 [The Sun]: https://www.thesun.co.uk/news
 [scripts]: https://github.com/trevordistance/newsy/tree/master/scripts
 [newsy.py]: https://github.com/trevordistance/newsy/blob/master/scripts/newsy.py
+[processing.py]: https://github.com/trevordistance/newsy/blob/master/scripts/processing.py
+[publications.py]: https://github.com/trevordistance/newsy/blob/master/scripts/publications.py
+[README.md]: https://github.com/trevordistance/newsy/blob/master/scripts/README.md
 
 File Structure
 --------------
@@ -29,9 +32,10 @@ File Structure
 |-README.md <br />
 | <br />
 |-[scripts][] <br />
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- README.md <br />
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [README.md][] <br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [newsy.py][] <br />
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- newsy_proc.py <br />
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [processing.py][] <br />
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [publications.py][] <br />
 | <br />
 |-archive <br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- README.md <br />
