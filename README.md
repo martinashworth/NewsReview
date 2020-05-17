@@ -21,6 +21,7 @@ It's very much a work in progress.
 [The Independent]: https://www.independent.co.uk/
 [The Sun]: https://www.thesun.co.uk/news
 [scripts]: https://github.com/trevordistance/newsy/tree/master/scripts
+[newsy.py]: https://github.com/trevordistance/newsy/blob/master/scripts/newsy.py
 
 File Structure
 --------------
@@ -29,7 +30,7 @@ File Structure
 | <br />
 |-[scripts][] <br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- README.md <br />
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- newsy.py <br />
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [newsy.py][] <br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- newsy_proc.py <br />
 | <br />
 |-archive <br />
