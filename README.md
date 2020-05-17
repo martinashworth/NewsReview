@@ -11,7 +11,6 @@ This is a tool to scrape news headlines from the following publications: <br />
 [The Times][] <br />
 [The Sun][] <br />
 
-
 It's very much a work in progress.
 
 [The BBC]: https://www.bbc.co.uk/news
@@ -21,13 +20,14 @@ It's very much a work in progress.
 [The Telegraph]: https://www.telegraph.co.uk/
 [The Independent]: https://www.independent.co.uk/
 [The Sun]: https://www.thesun.co.uk/news
+[scripts]: https://github.com/trevordistance/newsy/tree/master/scripts
 
 File Structure
 --------------
 
 |-README.md <br />
 | <br />
-|-scripts <br />
+|-[scripts][] <br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- README.md <br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- newsy.py <br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- newsy_proc.py <br />
