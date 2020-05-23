@@ -4,6 +4,7 @@ import os
 import requests
 import bs4
 import re
+import jsonpickle
 
 ################################################################################
 
@@ -88,6 +89,8 @@ class Publication():
 		self.att_word_list = str(self.att_headlines)
 		self.att_word_list = re.compile(r'\W+', re.UNICODE).split(self.att_word_list)
 
+		# clear att_html to allow jsonpickle to complete without recursion error
+		self.att_html = ''
 
 	def fcn_word_list(self):
 		pass
@@ -134,8 +137,10 @@ def fcn_create_archive(str_date_location):
     os.mkdir(str_date_location)
 
 
-def fcn_save_json(ins_object): # in case change top_x or stw, recreate and save
-	pass # save object (publication or summary).name.date.json
+def fcn_save_json(ins_publication, str_date_location): # in case change top_x or stw, recreate and save
+	json_object = jsonpickle.encode(ins_publication)
+	with open(f'{str_date_location}/{ins_publication.att_name}.json', "w") as outfile:
+		outfile.write(json_object)
 
 ################################################################################
 # plotting functionality

@@ -54,7 +54,8 @@ for ins_publication in lst_publications:
     # 4) parse raw html to strip words from headlines and store as an attribute
     ins_publication.fcn_parse_html()
 
-    # save the publication object in json with its html as an attribute
+    # 5) save the publication object in json with its html as an attribute
+    mod_processing.fcn_save_json(ins_publication, str_date_location)
 
 ################################################################################
 # generate a summary instance for the date being considered (s_date_stamp), by combining word_list attributes for each publication
