@@ -22,8 +22,8 @@ It's very much a work in progress.
 [The Sun]: https://www.thesun.co.uk/news
 [scripts]: https://github.com/trevordistance/newsy/tree/master/scripts
 [newsy.py]: https://github.com/trevordistance/newsy/blob/master/scripts/newsy.py
-[processing.py]: https://github.com/trevordistance/newsy/blob/master/scripts/processing.py
-[publications.py]: https://github.com/trevordistance/newsy/blob/master/scripts/publications.py
+[processing.py]: https://github.com/trevordistance/newsy/blob/master/scripts/mod_processing.py
+[publications.py]: https://github.com/trevordistance/newsy/blob/master/scripts/mod_publications.py
 [README.md]: https://github.com/trevordistance/newsy/blob/master/scripts/README.md
 
 File Structure
@@ -34,8 +34,8 @@ File Structure
 |-[scripts][] <br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [README.md][] <br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [newsy.py][] <br />
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [processing.py][] <br />
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [publications.py][] <br />
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [mod_processing.py][] <br />
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [mod_publications.py][] <br />
 | <br />
 |-archive <br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- README.md <br />
@@ -45,6 +45,17 @@ Documentation
 
 At this stage there isn't any Documentation.  This is for my purposes, not yours.
 
+However, in an attempt to make the code more readable, object names are prefixed as follows, ir order to identify their type:
+
+att = attribute (of a class)
+dct = dictionary
+fcn = function
+ins = instance (of a class)
+int = integer
+lst = list
+mod = module
+str = string
+
 Support
 -------
 
@@ -53,4 +64,4 @@ Nor is there any Support.  You're on your own, but you'll figure it out.
 Code of Conduct
 ---------------
 
-No Code of Conduct either.  Just behave until I work out what all this means.
+No Code of Conduct either.  Just be excellent to each other, and behave until I work out what all this means.
