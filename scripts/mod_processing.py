@@ -3,6 +3,7 @@ import datetime
 import os
 import requests
 import bs4
+import re
 
 ################################################################################
 
@@ -52,16 +53,16 @@ class Publication():
 			self.att_headlines = headlines_set
 
 		if self.att_name == 'Guardian':
-			self.att_word_list = 'Guardian word_list'
+			self.att_headlines = 'Guardian word list'
 
 		if self.att_name == 'Independent':
-			self.att_word_list = 'Independent word_list'
+			self.att_headlines = 'Independent word list'
 
 		if self.att_name == 'Mail':
-			self.att_word_list = 'Mail word_list'
+			self.att_headlines = 'Mail word list'
 
 		if self.att_name == 'Telegraph':
-			self.att_word_list = 'Telegraph word_list'
+			self.att_headlines = 'Telegraph word list'
 
 		if self.att_name == 'Times':
 			# find all <a> tags (ie containing headlines), store in att_headlines
@@ -82,7 +83,10 @@ class Publication():
 			self.att_headlines = headlines_set
 
 		if self.att_name == 'Sun':
-			self.att_word_list = 'Sun word_list'
+			self.att_headlines = 'Sun word list'
+
+		self.att_word_list = str(self.att_headlines)
+		self.att_word_list = re.compile(r'\W+', re.UNICODE).split(self.att_word_list)
 
 
 	def fcn_word_list(self):
