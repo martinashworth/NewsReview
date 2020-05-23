@@ -22,8 +22,8 @@ It's very much a work in progress.
 [The Sun]: https://www.thesun.co.uk/news
 [scripts]: https://github.com/trevordistance/newsy/tree/master/scripts
 [newsy.py]: https://github.com/trevordistance/newsy/blob/master/scripts/newsy.py
-[processing.py]: https://github.com/trevordistance/newsy/blob/master/scripts/mod_processing.py
-[publications.py]: https://github.com/trevordistance/newsy/blob/master/scripts/mod_publications.py
+[mod_processing.py]: https://github.com/trevordistance/newsy/blob/master/scripts/mod_processing.py
+[mod_publications.py]: https://github.com/trevordistance/newsy/blob/master/scripts/mod_publications.py
 [README.md]: https://github.com/trevordistance/newsy/blob/master/scripts/README.md
 
 File Structure
