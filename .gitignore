@@ -9,3 +9,5 @@ newsy.sublime-workspace
 /archive/2020*
 /archive/.DS_Store
 /scripts/*.json
+/scripts/leftovers.py
+/scripts/mod_functions.py
