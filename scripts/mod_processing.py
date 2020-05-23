@@ -44,13 +44,12 @@ class Publication():
 				working = str(self.att_headlines[index - 1]).split('__text\">')
 				# for items which resulted in a split (ie contained '__text\">')
 				if len(working) == 2:
-#					split the result (index 1 => text after '__text\">')
+					# split the result (index 1 => text after '__text\">')
 					working_a = working[1].split('<')
 					headlines_set.add(working_a[0])
 				else:  # if len(working) != 2 then it didn't contain a headline
 					pass  # therefore, ignore such a case
 			self.att_headlines = headlines_set
-
 
 		if self.att_name == 'Guardian':
 			self.att_word_list = 'Guardian word_list'
@@ -82,9 +81,12 @@ class Publication():
 					pass  # ignore such a case
 			self.att_headlines = headlines_set
 
-
 		if self.att_name == 'Sun':
 			self.att_word_list = 'Sun word_list'
+
+
+	def fcn_word_list(self):
+		pass
 
 ################################################################################
 
@@ -128,7 +130,7 @@ def fcn_create_archive(str_date_location):
     os.mkdir(str_date_location)
 
 
-def fcn_write_json(ins_object): # in case change top_x or stw, recreate and save
+def fcn_save_json(ins_object): # in case change top_x or stw, recreate and save
 	pass # save object (publication or summary).name.date.json
 
 ################################################################################

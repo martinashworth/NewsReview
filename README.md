@@ -43,18 +43,18 @@ File Structure
 Documentation
 -------------
 
-At this stage there isn't any Documentation.  This is for my purposes, not yours.
+At this stage there isn't any Documentation.  This is for my purposes, not yours. <br />
 
-However, in an attempt to make the code more readable, object names are prefixed as follows, ir order to identify their type:
+However, in an attempt to make the code more readable, object names are prefixed as follows, in order to identify their type: <br />
 
-att = attribute (of a class)
-dct = dictionary
-fcn = function
-ins = instance (of a class)
-int = integer
-lst = list
-mod = module
-str = string
+att = attribute (of a class) <br />
+dct = dictionary <br />
+fcn = function <br />
+ins = instance (of a class) <br />
+int = integer <br />
+lst = list <br />
+mod = module <br />
+str = string <br />
 
 Support
 -------
