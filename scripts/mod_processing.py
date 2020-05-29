@@ -24,7 +24,7 @@ class Publication():
 		self.att_html = requests.get(self.att_url)
 
 
-	def fcn_read_html(self):
+	def fcn_read_html(self, str_date_location):
 		'''Read html from archived file, based on self.att_name in str_date_location'''
 		with open(f'{str_date_location}/{self.att_name}.html', 'r') as f:
 			self.att_html = f.read()
@@ -37,13 +37,23 @@ class Publication():
 		open(f'{str_date_location}/{self.att_name}.html', 'a').close()
 
 
-	def fcn_parse_html(self):
+	def fcn_parse_html(self, str_date_stamp):
 		# use att_headlines attribute to store text from html response object
 
 		# insert if statement here to see if last 4 chars of att_name are 'prev'
 		# then self.att_html = bs4.BeautifulSoup(self.att_html, 'html.parser')
-
-		self.att_html = bs4.BeautifulSoup(self.att_html.text, 'html.parser')
+		if self.att_date == fcn_now_stamp():
+			print('inside the if')
+			print(self.att_name)
+			# for today's publication, use the text qualifier
+			print(str_date_stamp)
+			self.att_html = bs4.BeautifulSoup(self.att_html.text, 'html.parser')
+			# for previous publications, just use the html without .text
+		else:
+			print('inside the else')
+			print(self.att_name)
+			print(str_date_stamp)
+			self.att_html = bs4.BeautifulSoup(self.att_html, 'html.parser')
 
 		if self.att_name == 'BBC':
 			# find <h3> tags (ie containing headlines), store in att_headlines
