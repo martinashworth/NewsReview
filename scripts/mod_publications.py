@@ -56,7 +56,7 @@ Sun = mod_processing.Publication(\
     att_word_list = '', \
     att_date_stamp = '')
 
-summary_today = mod_processing.Summary(\
+Summary_today = mod_processing.Summary(\
     str_word_list = '', \
     dct_freq_dict = '', \
     str_ranked = '', \
@@ -120,7 +120,7 @@ Sun_prev = mod_processing.Publication(\
     att_word_list = '', \
     att_date_stamp = '')
 
-summary_prev = mod_processing.Summary(\
+Summary_prev = mod_processing.Summary(\
     str_word_list = '', \
     dct_freq_dict = '', \
     str_ranked = '', \

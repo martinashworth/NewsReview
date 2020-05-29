@@ -39,8 +39,12 @@ mod_processing.fcn_create_archive(str_date_location)
 # define a list of stopwords (initially empty) to be excluded from analysis
 lst_stop_words = []  # eventually fetch this from a file (json or csv)
 
-# create a list of publications based on the definitions in publications.py
+# create a list of today's publications based on definitions in publications.py
 lst_publications = [mod_publications.BBC, mod_publications.Guardian, mod_publications.Independent, mod_publications.Mail, mod_publications.Telegraph, mod_publications.Times, mod_publications.Sun]
+
+# create a list of previous publications using definitions in publications.py
+
+lst_publications_prev = [mod_publications.BBC_prev, mod_publications.Guardian_prev, mod_publications.Independent_prev, mod_publications.Mail_prev, mod_publications.Telegraph_prev, mod_publications.Times_prev, mod_publications.Sun_prev]
 
 ################################################################################
 # for each publication instance, for today's date, fetch, store and archive html

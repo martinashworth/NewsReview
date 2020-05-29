@@ -25,8 +25,9 @@ class Publication():
 
 
 	def fcn_read_html(self):
+		'''Read html from archived file, based on self.att_name in str_date_location'''
 		with open(f'{str_date_location}/{self.att_name}.html', 'r') as f:
-		self.att_html = f.read()
+			self.att_html = f.read()
 
 
 	def fcn_save_html(self, str_date_location):
