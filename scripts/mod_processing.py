@@ -24,6 +24,11 @@ class Publication():
 		self.att_html = requests.get(self.att_url)
 
 
+	def fcn_read_html(self):
+		with open(f'{str_date_location}/{self.att_name}.html', 'r') as f:
+		self.att_html = f.read()
+
+
 	def fcn_save_html(self, str_date_location):
 		'''save contents of publication attribute att_html to filename based on publication attribute att_name and today's archive location (str_date_location)'''
 
@@ -33,6 +38,10 @@ class Publication():
 
 	def fcn_parse_html(self):
 		# use att_headlines attribute to store text from html response object
+
+		# insert if statement here to see if last 4 chars of att_name are 'prev'
+		# then self.att_html = bs4.BeautifulSoup(self.att_html, 'html.parser')
+
 		self.att_html = bs4.BeautifulSoup(self.att_html.text, 'html.parser')
 
 		if self.att_name == 'BBC':
@@ -63,7 +72,22 @@ class Publication():
 			self.att_headlines = 'Mail word list'
 
 		if self.att_name == 'Telegraph':
-			self.att_headlines = 'Telegraph word list'
+			# find <h3> tags (ie containing headlines), store in att_headlines
+			self.att_headlines = self.att_html.find_all('a')
+			# create a set to add unique headlines to as they are found
+			headlines_set = set()
+			# step through the headlines contained in the <h3> tags
+			for index, headline in enumerate(self.att_headlines, start=1):
+				# headlines are preceded by '...__text">' so split on that
+				working = str(self.att_headlines[index - 1]).split('__text\">')
+				# for items which resulted in a split (ie contained '__text\">')
+				if len(working) == 2:
+					# split the result (index 1 => text after '__text\">')
+					working_a = working[1].split('<')
+					headlines_set.add(working_a[0])
+				else:  # if len(working) != 2 then it didn't contain a headline
+					pass  # therefore, ignore such a case
+			self.att_headlines = headlines_set
 
 		if self.att_name == 'Times':
 			# find all <a> tags (ie containing headlines), store in att_headlines
@@ -84,26 +108,43 @@ class Publication():
 			self.att_headlines = headlines_set
 
 		if self.att_name == 'Sun':
-			self.att_headlines = 'Sun word list'
+			self.att_headlines = self.att_html.find_all('a')
+			# create a set to add unique headlines to as they are found
+			headlines_set = set()
+			# step through the headlines contained in the h3 tags
+			for index, headline in enumerate(self.att_headlines, start=1):
+				# headlines are preceded by '...article:' so split on that
+				working = str(self.att_headlines[index - 1]).split('subdeck\">')
+				# for those items which resulted in a split (ie contained 'article:')
+				if len(working) == 2:
+					# split the result (where index 1 = text after 'article:')
+					working_a = working[1].split('<')
+					headlines_set.add(working_a[0])
+				else:  # if len(working) != 2 then it didn't contain a headline
+					pass  # ignore such a case
+			self.att_headlines = headlines_set
 
 		self.att_word_list = str(self.att_headlines)
 		self.att_word_list = re.compile(r'\W+', re.UNICODE).split(self.att_word_list)
 
 		# clear att_html to allow jsonpickle to complete without recursion error
-		self.att_html = ''
-
-	def fcn_word_list(self):
-		pass
+		# self.att_html = ''
 
 ################################################################################
 
 class Summary():
 	'''Summary Class used to compare individual instances of Publication Class'''
-	def __init__(self, str_word_list, dct_freq_dict, str_ranked, str_date, int_top_x, lst_stop_words):
+	def __init__(self, str_word_list, dct_freq_dict, str_ranked, str_date_stamp, int_top_x, lst_stop_words):
+		self.att_word_list = '',
+		self.att_freq_dict='',
+		self.att_ranked = '',
+		self.att_date_stamp = '',
+		self.att_top_x = '',
+		self.att_stop_words = ''
 
 	# why is this extra-indented?
-		def fcn_word_list(self):
-			pass # self.word_list = [for all pubs, sum(concat) word_list]
+	def fcn_word_list(self):
+		pass # self.word_list = [for all pubs, sum(concat) word_list]
 
 
 	def fcn_stop_words(self):
