@@ -57,12 +57,13 @@ Sun = mod_processing.Publication(\
     att_date_stamp = '')
 
 Summary_today = mod_processing.Summary(\
-    str_word_list = '', \
-    dct_freq_dict = '', \
-    str_ranked = '', \
-    str_date_stamp = '', \
-    int_top_x = '', \
-    lst_stop_words = '')
+    att_word_list = [], \
+    att_word_set = (), \
+    att_freq_dict = '', \
+    att_ranked = '', \
+    att_date_stamp = '', \
+    att_top_x = '', \
+    att_stop_words = '')
 
 BBC_prev = mod_processing.Publication(\
     att_name = 'BBC', \
@@ -121,9 +122,10 @@ Sun_prev = mod_processing.Publication(\
     att_date_stamp = '')
 
 Summary_prev = mod_processing.Summary(\
-    str_word_list = '', \
-    dct_freq_dict = '', \
-    str_ranked = '', \
-    str_date_stamp = '', \
-    int_top_x = '', \
-    lst_stop_words = '')
+    att_word_list = [], \
+    att_word_set = (), \
+    att_freq_dict = '', \
+    att_ranked = '', \
+    att_date_stamp = '', \
+    att_top_x = '', \
+    att_stop_words = '')

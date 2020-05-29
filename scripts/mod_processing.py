@@ -5,6 +5,7 @@ import requests
 import bs4
 import re
 import jsonpickle
+import mod_stop_words
 
 ################################################################################
 
@@ -22,12 +23,13 @@ class Publication():
 	def fcn_fetch_html(self):
 		'''Fetch the html for the url attribute and update the html attribute with the response'''
 		self.att_html = requests.get(self.att_url)
+		self.att_html = self.att_html
 
 
 	def fcn_read_html(self, str_date_location):
 		'''Read html from archived file, based on self.att_name in str_date_location'''
 		with open(f'{str_date_location}/{self.att_name}.html', 'r') as f:
-			self.att_html = f.read()
+			self.att_html = f.read().lower()
 
 
 	def fcn_save_html(self, str_date_location):
@@ -40,20 +42,12 @@ class Publication():
 	def fcn_parse_html(self, str_date_stamp):
 		# use att_headlines attribute to store text from html response object
 
-		# insert if statement here to see if last 4 chars of att_name are 'prev'
-		# then self.att_html = bs4.BeautifulSoup(self.att_html, 'html.parser')
-		if self.att_date == fcn_now_stamp():
-			print('inside the if')
-			print(self.att_name)
-			# for today's publication, use the text qualifier
-			print(str_date_stamp)
-			self.att_html = bs4.BeautifulSoup(self.att_html.text, 'html.parser')
-			# for previous publications, just use the html without .text
-		else:
-			print('inside the else')
-			print(self.att_name)
-			print(str_date_stamp)
-			self.att_html = bs4.BeautifulSoup(self.att_html, 'html.parser')
+		if self.att_date == fcn_now_stamp():  # for today's publications
+			# use the .text method
+			self.att_html = bs4.BeautifulSoup(self.att_html.text.lower(), 'html.parser')
+
+		else:  # for previous publications, just use att_html without .text
+			self.att_html = bs4.BeautifulSoup(self.att_html.lower(), 'html.parser')
 
 		if self.att_name == 'BBC':
 			# find <h3> tags (ie containing headlines), store in att_headlines
@@ -125,11 +119,11 @@ class Publication():
 			# step through the headlines contained in the h3 tags
 			for index, headline in enumerate(self.att_headlines, start=1):
 				# headlines are preceded by '...article:' so split on that
-				working = str(self.att_headlines[index - 1]).split('subdeck\">')
+				working = str(self.att_headlines[index - 1]).split('subdeck\">\n\t\t\t')
 				# for those items which resulted in a split (ie contained 'article:')
 				if len(working) == 2:
 					# split the result (where index 1 = text after 'article:')
-					working_a = working[1].split('<')
+					working_a = working[1].split('\t\t<')
 					headlines_set.add(working_a[0])
 				else:  # if len(working) != 2 then it didn't contain a headline
 					pass  # ignore such a case
@@ -145,29 +139,39 @@ class Publication():
 
 class Summary():
 	'''Summary Class used to compare individual instances of Publication Class'''
-	def __init__(self, str_word_list, dct_freq_dict, str_ranked, str_date_stamp, int_top_x, lst_stop_words):
-		self.att_word_list = '',
-		self.att_freq_dict='',
+	def __init__(self, att_word_list, att_word_set, att_freq_dict, att_ranked, att_date_stamp, att_top_x, att_stop_words):
+		self.att_word_list = [],
+		self.att_word_set = (),
+		self.att_freq_dict = '',
 		self.att_ranked = '',
 		self.att_date_stamp = '',
 		self.att_top_x = '',
 		self.att_stop_words = ''
 
-	# why is this extra-indented?
+
 	def fcn_word_list(self):
-		pass # self.word_list = [for all pubs, sum(concat) word_list]
-
-
-	def fcn_stop_words(self):
-		pass # self.word_list = self.word_list - stw
+		# self.word_list = [for all pubs, sum(concat) word_list]
+		self.att_word_set = set(self.att_word_list)
+		self.att_stop_words = mod_stop_words.fcn_stop_words()
+		self.att_word_set = self.att_word_set - self.att_stop_words
 
 
 	def fcn_freq_dict(self):
-		pass # self.freq_dict = count, zip, then rank each word
+		# self.freq_dict = count, zip, then rank each word
+		for word in self.att_word_list:  # for each word in the wordlist
+			if word in self.att_word_set:  # if the word is part of the set excluding stopwords
+		  		word_freq = [self.att_word_list.count(p) for p in self.att_word_set]  # count occurrences
+			else:  # otherwise
+				pass  # igore the word (as it is a stopword)
+		self.att_freq_dict = dict(list(zip(self.att_word_set, word_freq)))  # dict of words with frequencies
 
 
-	def fcn_top_x(self):
-		pass # self.filtered = rank self.freq_dict, filter <= self.top_x
+	def fcn_top_x(self, int_topx):
+		#pass # self.filtered = rank self.freq_dict, filter <= self.top_x
+		freqdictrank = [(self.att_freq_dict[key], key) for key in self.att_freq_dict]
+		freqdictrank.sort()
+		freqdictrank.reverse()
+		self.att_top_x = freqdictrank[:int_topx]
 
 ################################################################################
 # general admin functionality

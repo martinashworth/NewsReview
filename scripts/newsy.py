@@ -1,5 +1,5 @@
 ################################################################################
-# conventions - prefixes indicate the object type - this belongs in a README
+## conventions - prefixes indicate the object type - this belongs in a README ##
 ################################################################################
 
 # att = attribute (of a class)
@@ -13,10 +13,12 @@
 # str = string
 
 ################################################################################
+################################ import modules ################################
+################################################################################
+
 import mod_processing
 import mod_publications
 import mod_stop_words
-################################################################################
 
 ################################################################################
 ############ prepare general variables for use during processing ###############
@@ -89,5 +91,41 @@ for ins_publication in lst_publications_prev:
 
     # 3) parse raw html to strip words from headlines and store as an attribute
     ins_publication.fcn_parse_html(str_date_stamp_prev)
+
+################################################################################
+##################### process summary instance for today #######################
+################################################################################
+
+# set up initial attributes of summary_today instance
+mod_publications.Summary_today.att_date_stamp = str_date_stamp
+mod_publications.Summary_today.att_top_x = int_topx
+# cast to a list as, by default, it keeps creating a tuple
+mod_publications.Summary_today.att_word_list = []
+
+for ins_publication in lst_publications:
+
+    mod_publications.Summary_today.att_word_list = mod_publications.Summary_today.att_word_list + ins_publication.att_word_list
+
+mod_publications.Summary_today.fcn_word_list()
+mod_publications.Summary_today.fcn_freq_dict()
+mod_publications.Summary_today.fcn_top_x(int_topx)
+
+################################################################################
+##################### process summary instance for prev ########################
+################################################################################
+
+# set up initial attributes of summary_today instance
+mod_publications.Summary_prev.att_date_stamp = str_date_stamp_prev
+mod_publications.Summary_prev.att_top_x = int_topx
+# cast to a list as, by default, it keeps creating a tuple
+mod_publications.Summary_prev.att_word_list = []
+
+for ins_publication in lst_publications_prev:
+
+    mod_publications.Summary_prev.att_word_list = mod_publications.Summary_prev.att_word_list + ins_publication.att_word_list
+
+mod_publications.Summary_prev.fcn_word_list()
+mod_publications.Summary_prev.fcn_freq_dict()
+mod_publications.Summary_today.fcn_top_x(int_topx)
 
 ################################################################################
