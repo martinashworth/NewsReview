@@ -173,6 +173,13 @@ class Summary():
 		freqdictrank.reverse()
 		self.att_top_x = freqdictrank[:int_topx]
 
+	### encoding and writing to file
+
+	def fcn_write_json(self, str_date_location):
+	    Summary_json = jsonpickle.encode(self)
+	    with open (f'{str_date_location}/Summary.json', 'w') as Summary_file:
+	        Summary_file.write(Summary_json)
+
 ################################################################################
 # general admin functionality
 
@@ -193,10 +200,20 @@ def fcn_create_archive(str_date_location):
     os.mkdir(str_date_location)
 
 
+### is this (fcn_save_json) necessary? ###
+
 def fcn_save_json(ins_publication, str_date_location): # in case change top_x or stw, recreate and save
 	json_object = jsonpickle.encode(ins_publication)
 	with open(f'{str_date_location}/{ins_publication.att_name}.json', "w") as outfile:
 		outfile.write(json_object)
+
+### reading from file and decoding
+
+def fcn_read_json(str_date_location):
+    file = open(f'{str_date_location}/Summary.json', 'r')
+    Summary_json = file.read()
+    Summary_period = jsonpickle.decode(Summary_json)
+    return Summary_period
 
 ################################################################################
 # plotting functionality

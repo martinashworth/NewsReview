@@ -1,24 +1,10 @@
 ################################################################################
-## conventions - prefixes indicate the object type - this belongs in a README ##
-################################################################################
-
-# att = attribute (of a class)
-# dct = dictionary
-# fcn = function
-# ins = instance (of a class)
-# int = integer
-# lst = list
-# mod = module
-# set = set
-# str = string
-
-################################################################################
 ################################ import modules ################################
 ################################################################################
 
-import mod_processing
-import mod_publications
-import mod_stop_words
+import mod_processing  # module contains Class and function definitions
+import mod_publications  # module contains Publication and Summary instances
+import mod_stop_words  # module contains words to be excluded from analysis
 
 ################################################################################
 ############ prepare general variables for use during processing ###############
@@ -109,23 +95,24 @@ for ins_publication in lst_publications:
 mod_publications.Summary_today.fcn_word_list()
 mod_publications.Summary_today.fcn_freq_dict()
 mod_publications.Summary_today.fcn_top_x(int_topx)
+mod_publications.Summary_today.fcn_write_json(str_date_location)
 
 ################################################################################
 ##################### process summary instance for prev ########################
 ################################################################################
 
 # set up initial attributes of summary_today instance
-mod_publications.Summary_prev.att_date_stamp = str_date_stamp_prev
-mod_publications.Summary_prev.att_top_x = int_topx
+#mod_publications.Summary_prev.att_date_stamp = str_date_stamp_prev
+#mod_publications.Summary_prev.att_top_x = int_topx
 # cast to a list as, by default, it keeps creating a tuple
-mod_publications.Summary_prev.att_word_list = []
+#mod_publications.Summary_prev.att_word_list = []
 
-for ins_publication in lst_publications_prev:
+#for ins_publication in lst_publications_prev:
 
-    mod_publications.Summary_prev.att_word_list = mod_publications.Summary_prev.att_word_list + ins_publication.att_word_list
+#    mod_publications.Summary_prev.att_word_list = mod_publications.Summary_prev.att_word_list + ins_publication.att_word_list
 
-mod_publications.Summary_prev.fcn_word_list()
-mod_publications.Summary_prev.fcn_freq_dict()
-mod_publications.Summary_today.fcn_top_x(int_topx)
+#mod_publications.Summary_prev.fcn_word_list()
+#mod_publications.Summary_prev.fcn_freq_dict()
+#mod_publications.Summary_prev.fcn_top_x(int_topx)
 
 ################################################################################

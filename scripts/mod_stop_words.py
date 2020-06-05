@@ -91,6 +91,7 @@ def fcn_stop_words():
     stop_words.add("tv")
     stop_words.add("url")
     stop_words.add("us")
+    stop_words.add("ve")
     stop_words.add("want")
     stop_words.add("week")
     stop_words.add("what")
