@@ -1,13 +1,12 @@
+*.pyc
 .DS_Store
 .gitignore
-*.pyc
-/archive/2020*
-/archive/.DS_Store
 newsy.sublime-workspace
+/archive/.DS_Store
+/archive/2020*
+/archive/dataframe.ods
 /dev
 /old
-/archive/2020*
-/archive/.DS_Store
 /scripts/*.json
 /scripts/mod_functions.py
 /scripts/mod_prev_proc.py

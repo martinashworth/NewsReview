@@ -24,10 +24,10 @@ mod_processing.fcn_create_archive(str_date_location)
 
 # introduce date stamp and archive location for last week's comparison
 # for now just use hard-coded dates
-str_date_stamp_prev = '2020-05-24'
+#str_date_stamp_prev = '2020-05-24'
 
 # set prev archive location
-str_date_location_prev = mod_processing.fcn_archive_location(str_date_stamp_prev)
+#str_date_location_prev = mod_processing.fcn_archive_location(str_date_stamp_prev)
 
 # define a list of stopwords (initially empty) to be excluded from analysis
 lst_stop_words = []  # eventually fetch this from a file (json or csv)
@@ -40,7 +40,7 @@ lst_stop_words = []  # eventually fetch this from a file (json or csv)
 lst_publications = [mod_publications.BBC, mod_publications.Guardian, mod_publications.Independent, mod_publications.Mail, mod_publications.Telegraph, mod_publications.Times, mod_publications.Sun]
 
 # create a list of previous publications using definitions in publications.py
-lst_publications_prev = [mod_publications.BBC_prev, mod_publications.Guardian_prev, mod_publications.Independent_prev, mod_publications.Mail_prev, mod_publications.Telegraph_prev, mod_publications.Times_prev, mod_publications.Sun_prev]
+#lst_publications_prev = [mod_publications.BBC_prev, mod_publications.Guardian_prev, mod_publications.Independent_prev, mod_publications.Mail_prev, mod_publications.Telegraph_prev, mod_publications.Times_prev, mod_publications.Sun_prev]
 
 ################################################################################
 ## for today's publication instances, set date, fetch, store and archive html ##
@@ -67,16 +67,16 @@ for ins_publication in lst_publications:
 #### for prev publication instances, set previous date, read and parse html ####
 ################################################################################
 
-for ins_publication in lst_publications_prev:
+#for ins_publication in lst_publications_prev:
 
     # 1) assign today's date stamp to the instance
-    ins_publication.att_date = str_date_stamp_prev
+#    ins_publication.att_date = str_date_stamp_prev
 
     # 2) read raw html from archived file, store as attribute of instance
-    ins_publication.fcn_read_html(str_date_location_prev)
+#    ins_publication.fcn_read_html(str_date_location_prev)
 
     # 3) parse raw html to strip words from headlines and store as an attribute
-    ins_publication.fcn_parse_html(str_date_stamp_prev)
+
 
 ################################################################################
 ##################### process summary instance for today #######################
