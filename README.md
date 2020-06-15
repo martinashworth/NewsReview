@@ -21,7 +21,7 @@ It's very much a work in progress.
 [The Independent]: https://www.independent.co.uk/
 [The Sun]: https://www.thesun.co.uk/news
 [scripts]: https://github.com/trevordistance/newsy/tree/master/scripts
-[newsy.py]: https://github.com/trevordistance/newsy/blob/master/scripts/newsy.py
+[news.py]: https://github.com/trevordistance/newsy/blob/master/scripts/news.py
 [mod_processing.py]: https://github.com/trevordistance/newsy/blob/master/scripts/mod_processing.py
 [mod_publications.py]: https://github.com/trevordistance/newsy/blob/master/scripts/mod_publications.py
 [README.md]: https://github.com/trevordistance/newsy/blob/master/scripts/README.md
@@ -33,7 +33,7 @@ File Structure
 | <br />
 |-[scripts][] <br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [README.md][] <br />
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [newsy.py][] <br />
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [news.py][] <br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [mod_processing.py][] <br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [mod_publications.py][] <br />
 | <br />
