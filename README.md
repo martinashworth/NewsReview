@@ -1,5 +1,5 @@
-Newsy
-=====
+News
+====
 
 This is a tool to scrape news headlines from the following publications: <br />
 <br />
