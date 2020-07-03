@@ -1,14 +1,13 @@
 *.pyc
 .DS_Store
 .gitignore
-newsy.sublime-workspace
 /archive/.DS_Store
 /archive/2020*
 /archive/dataframe.ods
 /archive/.~lock.dataframe.ods#
 /dev
-/old
 /scripts/*.json
 /scripts/mod_functions.py
 /scripts/mod_prev_proc.py
 /scripts/mod_read_priors.py
+/scripts/heatmap.py

@@ -20,6 +20,7 @@ def fcn_stop_words():
     stop_words.add("claims")
     stop_words.add("class")
     stop_words.add("day")
+    stop_words.add("don")
     stop_words.add("eight")
     stop_words.add("femail")
     stop_words.add("find")
