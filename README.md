@@ -1,7 +1,15 @@
 News
 ====
 
-This is a tool to scrape news headlines from the following publications and then to perform analysis in order to rank words by frequency: <br />
+Notes
+-----
+
+This is a naive beginner's first attempt at writing a program in Python.
+
+Purpose
+-------
+
+This is a tool to scrape news headlines from the following publications, and then to perform analysis in order to extract words from the headlines, and rank the words by frequency: <br />
 <br />
 [The BBC][] <br />
 [The Guardian][] <br />
@@ -33,15 +41,11 @@ File Structure
 |-[scripts][] <br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [mod_processing.py][] <br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [mod_publications.py][] <br />
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [mod_stop_words.py][] <br />| <br />
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [mod_stop_words.py][] <br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [news.py][] <br />
+| <br />
 |-README.md <br />
 
-
-Notes
--------------
-
-This is a naive beginner's first attempt at writing a program in Python.
 
 Naming Conventions
 ------------------
