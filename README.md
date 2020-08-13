@@ -4,7 +4,11 @@ News
 Notes
 -----
 
-This is a naive beginner's first attempt at writing a program in Python.
+This is a naive beginner's first attempt at:<br />
+1) writing a program in Python<br />
+2) working with Git<br />
+<br />
+As such, the approach may appear unorthodox or simply 'wrong', in which case constructive comments are welcome.
 
 Purpose
 -------
@@ -33,7 +37,7 @@ This is a tool to scrape news headlines from the following publications, and the
 [mod_stop_words.py]: https://github.com/martinashworth/news/blob/master/scripts/mod_stop_words.py
 [README.md]: https://github.com/martinashworth/news/blob/master/scripts/README.md
 
-File Structure
+Directory Structure
 --------------
 
 |-archive <br />
@@ -50,14 +54,14 @@ File Structure
 Naming Conventions
 ------------------
 
-So as to aid my learning, and hopefully to make the code more readable, object names are prefixed in order to identify their type as follows: <br />
+So as to aid my learning, and hopefully to make the code more readable, object names are given the following prefixes in order to identify their type: <br />
 
-att = attribute (of a class) <br />
-dct = dictionary <br />
-fcn = function <br />
-ins = instance (of a class) <br />
-int = integer <br />
-lst = list <br />
-mod = module <br />
-set = set <br />
-str = string <br />
+att_ = attribute (of a class) <br />
+dct_ = dictionary <br />
+fcn_ = function <br />
+ins_ = instance (of a class) <br />
+int_ = integer <br />
+lst_ = list <br />
+mod_ = module <br />
+set_ = set <br />
+str_ = string <br />
