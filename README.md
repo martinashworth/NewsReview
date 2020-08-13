@@ -35,7 +35,6 @@ This is a tool to scrape news headlines from the following publications, and the
 [mod_processing.py]: https://github.com/martinashworth/news/blob/master/scripts/mod_processing.py
 [mod_publications.py]: https://github.com/martinashworth/news/blob/master/scripts/mod_publications.py
 [mod_stop_words.py]: https://github.com/martinashworth/news/blob/master/scripts/mod_stop_words.py
-[README.md]: https://github.com/martinashworth/news/blob/master/scripts/README.md
 
 Directory Structure
 --------------
@@ -47,8 +46,9 @@ Directory Structure
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [mod_publications.py][] <br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [mod_stop_words.py][] <br />
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [news.py][] <br />
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [README.md]: https://github.com/martinashworth/news/blob/master/scripts/README.md<br />
 | <br />
-|-README.md <br />
+|-README.md [README.md]: https://github.com/martinashworth/news/blob/master/README.md<br />
 
 
 Naming Conventions
@@ -65,3 +65,10 @@ lst_ = list <br />
 mod_ = module <br />
 set_ = set <br />
 str_ = string <br />
+
+
+How It Works
+------------
+
+The program is managed by the main ./scripts/news.py which calls upon additional modules for class and function definitions, as well as for a list of words to be excluded from processing<br />
+More details can be found in [./scripts/README.md]: https://github.com/martinashworth/news/blob/master/scripts/README.md
