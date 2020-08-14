@@ -1,6 +1,6 @@
 #! /usr/local/bin/python3
 ################################################################################
-# import modules ###############################################################
+# import modules
 ################################################################################
 
 import mod_processing  # module contains Class and function definitions
@@ -8,7 +8,7 @@ import mod_publications  # module contains Publication & Summary instances
 import mod_stop_words  # module contains words to exclude from analysis
 
 ################################################################################
-# prepare general variables for use during processing ##########################
+# prepare general variables for use during processing
 ################################################################################
 
 # set the number of words to be included in the final ranking
@@ -27,14 +27,14 @@ mod_processing.fcn_create_archive(str_date_location)
 lst_stop_words = []  # eventually fetch this from a file (json or csv)
 
 ################################################################################
-# create instances of publications #############################################
+# create instances of publications
 ################################################################################
 
 # create a list of publications based on definitions in publications.py
 lst_publications = [mod_publications.BBC, mod_publications.Guardian, mod_publications.Independent, mod_publications.Mail, mod_publications.Telegraph, mod_publications.Times, mod_publications.Sun]
 
 ################################################################################
-# for each publication instance, set date, fetch html, save and parse ##########
+# for each publication instance, set date, fetch html, save and parse
 ################################################################################
 
 # for each publication instance in the list:
@@ -53,7 +53,7 @@ for ins_publication in lst_publications:
     ins_publication.fcn_parse_html(str_date_stamp)
 
 ################################################################################
-# create Summary instance to bundle results from publication instances #########
+# create Summary instance to bundle results from publication instances
 ################################################################################
 
 # set up initial attributes of summary_today instance
@@ -64,7 +64,7 @@ mod_publications.Summary_today.att_top_x = int_topx
 mod_publications.Summary_today.att_word_list = []
 
 ################################################################################
-# bundle word_lsits from publication instances into a Summary instance #########
+# bundle word_lsits from publication instances into a Summary instance
 ################################################################################
 
 # combine the word_lists of individual publications to create a summary
@@ -73,7 +73,7 @@ for ins_publication in lst_publications:
     mod_publications.Summary_today.att_word_list = mod_publications.Summary_today.att_word_list + ins_publication.att_word_list
 
 ################################################################################
-# process the Summary to rank words by frequency and store the results #########
+# process the Summary to rank words by frequency and store the results
 ################################################################################
 
 # filter out stop words
