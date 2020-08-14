@@ -27,7 +27,7 @@ mod_processing.fcn_create_archive(str_date_location)
 lst_stop_words = []  # eventually fetch this from a file (json or csv)
 
 ################################################################################
-# create instances of publications
+# create instances of publication classes
 ################################################################################
 
 # create a list of publications based on definitions in publications.py
