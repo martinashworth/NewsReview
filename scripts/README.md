@@ -16,11 +16,11 @@ naming conventions
 news.py
 -------
 
-The main script loads modules and manages program execution:
-    - import modules
-    - prepare general variables for use during processing
-    - create instances of publications
-    - for each publication instance, set date, fetch html, save and parse
-    - create Summary instance to bundle results from publication instances
-    - bundle word_lsits from publication instances into a Summary instance
-    - process the Summary to rank words by frequency and store the results
+The main script loads modules and manages program execution:<br />
+    - import modules<br />
+    - prepare general variables for use during processing<br />
+    - create instances of publications<br />
+    - for each publication instance, set date, fetch html, save and parse<br />
+    - create Summary instance to bundle results from publication instances<br />
+    - bundle word_lsits from publication instances into a Summary instance<br />
+    - process the Summary to rank words by frequency and store the results<br />
