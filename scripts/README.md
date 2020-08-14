@@ -18,10 +18,10 @@ news.py
 
 The main script loads modules and manages program execution:<br />
 <br />
-    1. import modules<br />
-    2. prepare general variables for use during processing<br />
-    3. create instances of publications<br />
-    4. for each publication instance, set date, fetch html, save and parse<br />
-    5. create Summary instance to bundle results from publication instances<br />
-    6. bundle word_lsits from publication instances into a Summary instance<br />
-    7. process the Summary to rank words by frequency and store the results<br />
+    1) import modules<br />
+    2) prepare general variables for use during processing<br />
+    3) create instances of publications<br />
+    4) for each publication instance, set date, fetch html, save and parse<br />
+    5) create Summary instance to bundle results from publication instances<br />
+    6) bundle word_lsits from publication instances into a Summary instance<br />
+    7) process the Summary to rank words by frequency and store the results<br />
