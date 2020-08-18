@@ -72,3 +72,8 @@ How It Works
 
 The program is managed by the main ./scripts/news.py which calls upon additional modules for class and function definitions, as well as for a list of words to be excluded from processing<br />
 More details can be found in [./scripts/README.md]: https://github.com/martinashworth/news/blob/master/scripts/README.md
+
+
+Download
+--------
+git clone -b 'vX.X' --single-branch --depth 1 https://github.com/martinashworth/news.git
