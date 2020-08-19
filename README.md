@@ -2,16 +2,9 @@ News
 ====
 
 Notes
------
-
-This is a naive beginner's first attempt at:<br />
-1) writing a program in Python<br />
-2) working with Git<br />
-<br />
-As such, the approach may appear unorthodox or simply 'wrong', in which case constructive comments are welcome.
-
-Purpose
 -------
+
+![Image of NewsReview](http://whatmakesitgo.com/wp-content/uploads/2020/08/heatmap.png)
 
 This is a tool to scrape news headlines from the following publications, and then to perform analysis in order to extract words from the headlines, and rank the words by frequency: <br />
 <br />
@@ -54,7 +47,7 @@ Directory Structure
 Naming Conventions
 ------------------
 
-So as to aid my learning, and hopefully to make the code more readable, object names are given the following prefixes in order to identify their type: <br />
+Object names are given the following prefixes in order to identify their type: <br />
 
 att_ = attribute (of a class) <br />
 dct_ = dictionary <br />
