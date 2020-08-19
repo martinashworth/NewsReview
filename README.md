@@ -13,6 +13,8 @@ As such, the approach may appear unorthodox or simply 'wrong', in which case con
 Purpose
 -------
 
+![Image of NewsReview](http://whatmakesitgo.com/wp-content/uploads/2020/08/heatmap.png)
+
 This is a tool to scrape news headlines from the following publications, and then to perform analysis in order to extract words from the headlines, and rank the words by frequency: <br />
 <br />
 [The BBC][] <br />
