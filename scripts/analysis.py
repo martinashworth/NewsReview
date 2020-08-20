@@ -86,16 +86,38 @@ frame_week_tidy = frame_week.drop(columns = ['tot']).head(10)
 
 ################################################################################
 import matplotlib.pyplot as plt
-import seaborn as sns
+import seaborn as sb
 ################################################################################
 # generate a heatmap
 ################################################################################
-sns.set()
-f, ax = plt.subplots(figsize=(9,6))
-sns_plot = sns.heatmap(frame_week_tidy, annot=True, fmt="d", linewidths=.5, ax=ax, cmap="Oranges")
 
+sb.set() # override matplot lib aesthetic parameters with seaborn defaults
+f, ax = plt.subplots(figsize=(9,7)) # define the size of the plot
+ax.yaxis.set_ticks_position('right') # label the y-axis on the right-hand side
+heat_map = sb.heatmap(frame_week_tidy,
+                       annot=True, # show word frequencies in cells
+                       fmt="d",
+                       linewidths=.5,
+                       ax=ax,
+                       cmap="Oranges", # select colourmap
+                      cbar=False) # disable the colourbar
+heat_map.set_title('Word Frequency in News Headlines This Week',fontsize=20)
+
+################################################################################
 # create a figure from the heatmap and save to file
-fig = sns_plot.get_figure()
-fig.savefig(f'{mod_processing.fcn_archive_location(date.today())}/heatmap', dpi=None, facecolor='w', edgecolor='w', orientation='portrait', papertype=None, format=None, transparent=False, bbox_inches=None, pad_inches=0.1, metadata=None)
+################################################################################
+
+fig = heat_map.get_figure()
+fig.savefig(f'{mod_processing.fcn_archive_location(date.today())}/heatmap',
+            dpi=None,
+            facecolor='w',
+            edgecolor='w',
+            orientation='portrait',
+            papertype=None,
+            format=None,
+            transparent=False,
+            bbox_inches=None,
+            pad_inches=0.1,
+            metadata=None)
 
 ################################################################################

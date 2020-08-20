@@ -6,7 +6,7 @@ Notes
 
 ![Image of NewsReview](http://whatmakesitgo.com/wp-content/uploads/2020/08/heatmap.png)
 
-This is a tool to scrape news headlines from the following publications, and then to perform analysis in order to extract words from the headlines, and rank the words by frequency: <br />
+This is a tool to scrape news headlines from the following publications, and then to perform analysis in order to extract words from the headlines,  rank the words by frequency over the last week, and display the results in a heatmap: <br />
 <br />
 [The BBC][] <br />
 [The Telegraph][] <br />

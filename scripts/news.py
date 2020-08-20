@@ -90,4 +90,4 @@ mod_publications.Summary_today.fcn_write_json(str_date_location)
 
 ################################################################################
 
-import analysis.py
+import analysis

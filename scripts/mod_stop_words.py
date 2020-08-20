@@ -39,6 +39,7 @@ def fcn_stop_words():
     stop_words.add("inline")
     stop_words.add("itemprop")
     stop_words.add("kicker")
+    stop_words.add("life")
     stop_words.add("list")
     stop_words.add("lives")
     stop_words.add("ll")
@@ -68,6 +69,8 @@ def fcn_stop_words():
     stop_words.add("return")
     stop_words.add("review")
     stop_words.add("right")
+    stop_words.add("rise")
+    stop_words.add("row")
     stop_words.add("s")
     stop_words.add("say")
     stop_words.add("says")
@@ -106,5 +109,6 @@ def fcn_stop_words():
     stop_words.add("without")
     stop_words.add("xa0")
     stop_words.add("year")
-
+    stop_words.add("years")
+    
     return stop_words
