@@ -9,19 +9,13 @@ Notes
 This is a tool to scrape news headlines from the following publications, and then to perform analysis in order to extract words from the headlines, and rank the words by frequency: <br />
 <br />
 [The BBC][] <br />
-[The Guardian][] <br />
-[The Independent][] <br />
-[The Mail][] <br />
 [The Telegraph][] <br />
 [The Times][] <br />
 [The Sun][] <br />
 
 [The BBC]: https://www.bbc.co.uk/news
 [The Times]: https://www.thetimes.co.uk/
-[The Guardian]: https://www.theguardian.com/uk/
-[The Mail]: https://www.dailymail.co.uk/home/index.html
 [The Telegraph]: https://www.telegraph.co.uk/
-[The Independent]: https://www.independent.co.uk/
 [The Sun]: https://www.thesun.co.uk/news
 [scripts]: https://github.com/martinashworth/news/tree/master/scripts
 [news.py]: https://github.com/martinashworth/news/blob/master/scripts/news.py
@@ -64,6 +58,7 @@ How It Works
 ------------
 
 The program is managed by the main ./scripts/news.py which calls upon additional modules for class and function definitions, as well as for a list of words to be excluded from processing<br />
+<br />
 More details can be found in [./scripts/README.md]: https://github.com/martinashworth/news/blob/master/scripts/README.md
 
 
