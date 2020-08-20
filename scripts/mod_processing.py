@@ -216,21 +216,3 @@ def fcn_read_json(str_date_location):
     return Summary_period
 
 ################################################################################
-# plotting functionality
-
-def fcn_plot_summary(ins_summary_today, ins_summary_prev, str_today_date):
-	pass #
-
-
-	def fcn_read_summary(self): # read from {summary}_{today/prev}.json
-		pass # self.summary_today/prev = {summary}_{today/prev}.json
-
-
-	def fcn_create_plot(self):
-		pass # plt = self.summary_today.filtered v self.summary_prev.filtered
-
-
-	def fcn_plot_save(plt, today_date):
-		pass #
-
-################################################################################
