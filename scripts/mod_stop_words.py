@@ -15,6 +15,7 @@ def fcn_stop_words():
     stop_words.add("back")
     stop_words.add("best")
     stop_words.add("buy")
+    stop_words.add("britain")
     stop_words.add("case")
     stop_words.add("claim")
     stop_words.add("claims")
