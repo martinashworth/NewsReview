@@ -4,7 +4,7 @@ News
 Notes
 -------
 
-This is a tool to generate a visual representation of the week's news<br />
+This is a tool to generate a visual representation of the week's news<br /><br />
 ![Image of NewsReview](http://whatmakesitgo.com/wp-content/uploads/2020/08/Screenshot-2020-08-21-at-16.52.47.png)
 
 It does this as follows:
