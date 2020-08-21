@@ -4,8 +4,11 @@ News
 Notes
 -------
 
-This is a tool to scrape news headlines from the following publications, and then to perform analysis in order to extract words from the headlines,  rank the words by frequency over the last week, and display the results in a heatmap: <br />
-<br />
+This is a tool to generate a visual representation of the week's news
+![Image of NewsReview](http://whatmakesitgo.com/wp-content/uploads/2020/08/Screenshot-2020-08-21-at-16.52.47.png)
+
+It does this as follows:
+1) scrape news headlines from the following publications:
 [The BBC][] <br />
 [The Telegraph][] <br />
 [The Times][] <br />
@@ -21,7 +24,10 @@ This is a tool to scrape news headlines from the following publications, and the
 [mod_publications.py]: https://github.com/martinashworth/news/blob/master/scripts/mod_publications.py
 [mod_stop_words.py]: https://github.com/martinashworth/news/blob/master/scripts/mod_stop_words.py
 
-![Image of NewsReview](http://whatmakesitgo.com/wp-content/uploads/2020/08/Screenshot-2020-08-21-at-16.52.47.png)
+2) perform analysis in order to extract individual words from headlines then rank the words for each day
+http://whatmakesitgo.com/wp-content/uploads/2020/08/Screenshot-2020-08-21-at-16.51.34.png
+3) rank the individual words by their total number of appearances over the last week
+http://whatmakesitgo.com/wp-content/uploads/2020/08/Screenshot-2020-08-21-at-16.52.25.png
 
 
 Directory Structure
