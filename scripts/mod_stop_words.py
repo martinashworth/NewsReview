@@ -7,6 +7,7 @@ import wordcloud
 def fcn_stop_words():
     stop_words = set(wordcloud.STOPWORDS)
     stop_words.add("")
+    stop_words.add("000")
     stop_words.add("article")
     stop_words.add("at")
     stop_words.add("amp")
@@ -110,5 +111,5 @@ def fcn_stop_words():
     stop_words.add("xa0")
     stop_words.add("year")
     stop_words.add("years")
-    
+
     return stop_words
