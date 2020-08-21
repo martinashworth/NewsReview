@@ -25,6 +25,7 @@ def fcn_stop_words():
     stop_words.add("don")
     stop_words.add("eight")
     stop_words.add("england")
+    stop_words.add("face")
     stop_words.add("femail")
     stop_words.add("find")
     stop_words.add("first")
