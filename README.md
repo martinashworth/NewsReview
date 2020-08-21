@@ -21,7 +21,7 @@ This is a tool to scrape news headlines from the following publications, and the
 [mod_publications.py]: https://github.com/martinashworth/news/blob/master/scripts/mod_publications.py
 [mod_stop_words.py]: https://github.com/martinashworth/news/blob/master/scripts/mod_stop_words.py
 
-![Image of NewsReview](http://whatmakesitgo.com/wp-content/uploads/2020/08/heatmap.png)
+![Image of NewsReview](http://whatmakesitgo.com/wp-content/uploads/2020/08/Screenshot-2020-08-21-at-16.52.47.png)
 
 
 Directory Structure
