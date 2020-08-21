@@ -1,13 +1,13 @@
-News
-====
+NewsReview
+==========
 
 Notes
 -------
 
-This is a tool to generate a visual representation of the week's news<br /><br />
+This is a tool to generate a visual representation of the week's news:<br /><br />
 ![Image of NewsReview](http://whatmakesitgo.com/wp-content/uploads/2020/08/Screenshot-2020-08-21-at-16.52.47.png)
 
-It does this as follows:
+It does this using the steps below:
 1) scrape news headlines from the following publications:<br />
 [The BBC][] <br />
 [The Telegraph][] <br />
@@ -24,9 +24,9 @@ It does this as follows:
 [mod_publications.py]: https://github.com/martinashworth/news/blob/master/scripts/mod_publications.py
 [mod_stop_words.py]: https://github.com/martinashworth/news/blob/master/scripts/mod_stop_words.py
 
-2) perform analysis in order to extract individual words from headlines then rank the words for each day<br />
+2) perform analysis in order to extract individual words from headlines then rank the words for each day<br /><br />
 ![Image of DataFrameDay](http://whatmakesitgo.com/wp-content/uploads/2020/08/Screenshot-2020-08-21-at-16.51.34.png)
-3) rank the individual words by their total number of appearances over the last week<br />
+3) rank the individual words by their total number of appearances over the last week<br /><br />
 ![Image of DataFrameWeek](http://whatmakesitgo.com/wp-content/uploads/2020/08/Screenshot-2020-08-21-at-16.52.25.png)
 
 
