@@ -92,7 +92,7 @@ import seaborn as sb
 ################################################################################
 
 sb.set() # override matplot lib aesthetic parameters with seaborn defaults
-f, ax = plt.subplots(figsize=(9,7)) # define the size of the plot
+f, ax = plt.subplots(figsize=(8,7)) # define the size of the plot
 ax.yaxis.set_ticks_position('right') # label the y-axis on the right-hand side
 heat_map = sb.heatmap(frame_week_tidy,
                        annot=True, # show word frequencies in cells
