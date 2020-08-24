@@ -5,6 +5,7 @@
 
 import os
 import shutil
+import checkdir
 import mod_processing  # module contains Class and function definitions
 import mod_publications  # module contains Publication & Summary instances
 import mod_stop_words  # module contains words to exclude from analysis
