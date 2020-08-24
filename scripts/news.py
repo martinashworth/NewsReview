@@ -3,9 +3,13 @@
 # import modules
 ################################################################################
 
+import os
+import shutil
 import mod_processing  # module contains Class and function definitions
 import mod_publications  # module contains Publication & Summary instances
 import mod_stop_words  # module contains words to exclude from analysis
+
+################################################################################
 
 ################################################################################
 # prepare general variables for use during processing
@@ -19,6 +23,12 @@ str_date_stamp = mod_processing.fcn_now_stamp()
 
 # define today's archive location
 str_date_location = mod_processing.fcn_archive_location(str_date_stamp)
+
+# delete today's archive location (if exists from a previous run)
+if os.path.exists(str_date_location) is True:
+    shutil.rmtree(str_date_location)
+else:
+    pass
 
 # create today's archive location
 mod_processing.fcn_create_archive(str_date_location)
