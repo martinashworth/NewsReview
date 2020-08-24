@@ -1,13 +1,14 @@
-News
-====
+NewsReview
+==========
 
 Notes
 -------
 
-![Image of NewsReview](http://whatmakesitgo.com/wp-content/uploads/2020/08/heatmap.png)
+This is a tool to generate a visual representation of the week's news:<br /><br />
+![Image of NewsReview](http://whatmakesitgo.com/wp-content/uploads/2020/08/Screenshot-2020-08-21-at-16.52.47.png)
 
-This is a tool to scrape news headlines from the following publications, and then to perform analysis in order to extract words from the headlines,  rank the words by frequency over the last week, and display the results in a heatmap: <br />
-<br />
+It does this using the steps below:<br />
+1) scrape news headlines from the following publications:<br />
 [The BBC][] <br />
 [The Telegraph][] <br />
 [The Times][] <br />
@@ -22,6 +23,12 @@ This is a tool to scrape news headlines from the following publications, and the
 [mod_processing.py]: https://github.com/martinashworth/news/blob/master/scripts/mod_processing.py
 [mod_publications.py]: https://github.com/martinashworth/news/blob/master/scripts/mod_publications.py
 [mod_stop_words.py]: https://github.com/martinashworth/news/blob/master/scripts/mod_stop_words.py
+
+2) perform analysis in order to extract individual words from headlines then rank the frequency of the words for each day<br /><br />
+![Image of DataFrameDay](http://whatmakesitgo.com/wp-content/uploads/2020/08/Screenshot-2020-08-21-at-16.51.34.png)<br />
+3) rank the individual words by their total number of appearances over the last week<br /><br />
+![Image of DataFrameWeek](http://whatmakesitgo.com/wp-content/uploads/2020/08/Screenshot-2020-08-21-at-16.52.25.png)
+
 
 Directory Structure
 --------------
