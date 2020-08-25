@@ -4,5 +4,5 @@
 # populate missing directories
 import checkdir
 
-# run analysis
+# carry out analysis
 import analysis
