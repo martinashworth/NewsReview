@@ -50,7 +50,6 @@ How It Works
 ------------
 
 The program is managed by the main ./scripts/news.py which calls upon additional modules for class and function definitions, as well as for a list of words to be excluded from processing<br />
-<br />
 1) check for archive directories (see checkdir notes below)<br />
 2) download front pages from publications<br />
 3) parse html to extract news headlines<br />
