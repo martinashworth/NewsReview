@@ -51,4 +51,16 @@ How It Works
 
 The program is managed by the main ./scripts/news.py which calls upon additional modules for class and function definitions, as well as for a list of words to be excluded from processing<br />
 <br />
+1) check for archive directories (see checkdir notes below)<br />
+2) download front pages from publications<br />
+3) parse html to extract news headlines<br />
+4) identify individual words<br />
+5) rank the words by the number of instances of each word<br />
+6) identify the top 15 words for each day<br />
+7) save the results to a date-stamped archive directory<br />
+8) tabulate the results for the last 7 days<br />
+9) rank the words by overall frequency for the week<br />
+10) generate a heatmap to display the results in a visual form<br />
+11) save the heatmap to today's archive directory<br />
+
 More details can be found in [./scripts/README.md]: https://github.com/martinashworth/news/blob/master/scripts/README.md
