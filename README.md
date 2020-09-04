@@ -30,21 +30,6 @@ It does this using the steps below:<br />
 ![Image of DataFrameWeek](http://whatmakesitgo.com/wp-content/uploads/2020/08/Screenshot-2020-08-21-at-16.52.25.png)
 
 
-Directory Structure
---------------
-
-|-archive <br />
-| <br />
-|-[scripts][] <br />
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [mod_processing.py][] <br />
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [mod_publications.py][] <br />
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [mod_stop_words.py][] <br />
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [news.py][] <br />
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|- [README.md]: https://github.com/martinashworth/news/blob/master/scripts/README.md<br />
-| <br />
-|-README.md [README.md]: https://github.com/martinashworth/news/blob/master/README.md<br />
-
-
 Naming Conventions
 ------------------
 
