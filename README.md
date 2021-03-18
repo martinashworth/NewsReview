@@ -4,7 +4,7 @@ NewsReview
 Notes
 -------
 
-This is a tool to generate a visual representation of the week's news.:<br />
+This is a tool to generate a visual representation of the week's news.<br /><br />
 It is intended as a whimsical demonstration of the ability to:<br />
 a) source data (in this case by scraping it from a variety of websites)<br />
 b) perform some analysis on the data<br />
