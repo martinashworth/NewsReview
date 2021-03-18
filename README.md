@@ -4,7 +4,12 @@ NewsReview
 Notes
 -------
 
-This is a tool to generate a visual representation of the week's news:<br /><br />
+This is a tool to generate a visual representation of the week's news.:<br />
+It is intended as a whimsical demonstration of the ability to:<br />
+a) source data (in this case by scraping it from a variety of websites)<br />
+b) perform some analysis on the data<br />
+c) present the results in a visual format that is easy to absorb<br />
+d) automate the whole process <br /><br />
 ![Image of NewsReview](http://whatmakesitgo.com/wp-content/uploads/2020/08/Screenshot-2020-08-21-at-16.52.47.png)
 
 It does this using the steps below:<br />
